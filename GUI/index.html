@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <canvas id="particles"></canvas>
+    <div class="container p-8 w-full max-w-md md:max-w-lg">
+        <div class="current-song text-center mb-8">
+            <h2 id="current-title" class="text-2xl md:text-3xl font-bold">No Song Playing</h2>
+            <p id="current-artist" class="text-lg"></p>
+            <div class="waveform mt-4" id="waveform" style="display: none;">
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+            </div>
+        </div>
+        <div class="controls flex justify-center gap-6 mb-8">
+            <button class="control-btn p-4 rounded-full" onclick="playPrevious()">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/rewind.png" alt="Previous" class="w-6 h-6">
+            </»?    </button>
+            <button class="control-btn p-4 rounded-full" onclick="togglePlayPause()" id="play-pause">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/play.png" alt="Play" class="w-6 h-6" id="play-pause-icon">
+            </button>
+            <button class="control-btn p-4 rounded-full" onclick="playNext()">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/fast-forward.png" alt="Next" class="w-6 h-6">
+            </button>
+        </div>
+        <div class="playlist max-h-64 overflow-y-auto" id="playlist"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
